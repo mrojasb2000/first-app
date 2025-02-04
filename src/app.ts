@@ -1,9 +1,12 @@
-import { Server } from './presentation/server';
+import { Server, Options } from './presentation/server';
 
 (() => {
   main();
 })()
 
 async function main() {
-  new Server().start();
+  const options: Options = {
+    port: 9000
+  }
+  new Server(options).start();
 };
